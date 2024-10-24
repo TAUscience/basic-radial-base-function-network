@@ -12,7 +12,7 @@ def generar_dataset_facil(n_samples=500, random_state=42):
     
     return X_train, X_test, y_train, y_test
 
-X_train, X_test, y_train, y_test = generar_dataset()
+X_train, X_test, y_train, y_test = generar_dataset_facil()
 
 """
 def generar_dataset_dificil(n_samples=500, random_state=15):
