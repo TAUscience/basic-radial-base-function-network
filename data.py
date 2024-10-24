@@ -1,6 +1,7 @@
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
+from data import X_train, X_test, y_train, y_test
 
 def generar_dataset_facil(n_samples=500, random_state=42):
     X, y = make_classification(n_samples=n_samples, n_features=2, 
