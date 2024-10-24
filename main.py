@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import accuracy_score
+from data import X_train, X_test, y_train, y_test
 
 kmeans = KMeans(n_clusters=5)
 kmeans.fit(X_train)
