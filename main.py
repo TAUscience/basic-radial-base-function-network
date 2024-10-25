@@ -33,20 +33,16 @@ def apply_rbf(X, centers, sigma):
 
 
 rbf_train = apply_rbf(X_train, centers, sigma)
-
-model = LinearRegression()
-model.fit(rbf_train, y_train)
-
 rbf_test = apply_rbf(X_test, centers, sigma)
 
-# Realizar predicciones
+model = LogisticRegression()
+model.fit(rbf_train, y_train)
+
 y_pred = model.predict(rbf_test)
-y_pred_binarias = np.where(y_pred >= 0.5, 1, 0)
 
-print("Predicciones binarias:", y_pred_binarias)
+print("Etiquetas clasificadas", y_pred)
+print("Etiquetas reales", y_test)
 
-print("Etiquetas reales:", y_test)
-
-exactitud = accuracy_score(y_test, y_pred_binarias)
+exactitud = accuracy_score(y_test, y_pred)
 print("Exactitud del modelo:", exactitud)
 
